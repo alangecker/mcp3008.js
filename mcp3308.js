@@ -14,11 +14,11 @@ function read(channel, callback) {
     if (spi === undefined)
         return;
 
-    var txBuf = new Buffer([1, 8 + channel << 4, 0]),
+    var txBuf = new Buffer([((channel & 6) >> 1)+12, (channel & 1) << 7, 0]),
         rxBuf = new Buffer([0,0,0]);
 
     spi.transfer(txBuf, rxBuf, function (dev, buffer) {
-        var value = ((buffer[1] & 3) << 8) + buffer[2];
+        var value = ((buffer[1] & 15) << 8) + buffer[2];
         callback(value);
     });
 }
@@ -36,7 +36,7 @@ function stopInstance (instance) {
     }
 }
 
-var Mcp3008 = function (dev, options) {
+var Mcp3308 = function (dev, options) {
     device = dev || device;
     options = options || {
         mode: 0,        // Mode 0
@@ -71,4 +71,4 @@ var Mcp3008 = function (dev, options) {
     }
 };
 
-module.exports = Mcp3008;
+module.exports = Mcp3308;

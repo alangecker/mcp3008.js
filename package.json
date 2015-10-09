@@ -1,13 +1,13 @@
 {
-  "name": "mcp3008.js",
+  "name": "mcp3308.js",
   "version": "0.3.2",
-  "author": "Ricco Forgaard <ricco@fiskeben.dk>",
-  "description": "Read values from MCP3008 ADC using SPI.",
-  "main": "./mcp3008.js",
+  "author": "Andreas Langecker <a.langecker@posteo.de>",
+  "description": "Read values from MCP3308 ADC using SPI.",
+  "main": "./mcp3308.js",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/fiskeben/mcp3008.js"
+    "url": "https://github.com/fiskeben/mcp3308.js"
   },
   "dependencies": {
     "spi": "~0.2.0"

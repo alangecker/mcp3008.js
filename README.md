@@ -1,13 +1,14 @@
-# mcp3008.js
+# mcp3308.js
 
-A node.js module for interfacing the MCP3008 analog/digital converter.
+A node.js module for interfacing the MCP3308 analog/digital converter.
+This is an fork of the mcp3008.js module from fiskeben (https://github.com/fiskeben/mcp3008.js)
 
 The same instance of the module can control all eight channels on the converter.
 
 ## Installation
 
 ```
-$ npm install mcp3008.js
+$ npm install mcp3308.js
 ```
 
 ## Usage
@@ -15,8 +16,8 @@ $ npm install mcp3008.js
 Here's a short example:
 
 ```
-var Mcp3008 = require('mcp3008.js'),
-    adc = new Mcp3008(),
+var Mcp3308 = require('mcp3308.js'),
+    adc = new Mcp3308(),
     channel = 0;
 
 adc.read(channel, function (value) {
@@ -29,7 +30,7 @@ adc.read(channel, function (value) {
 ### Constructor
 
 ```
-new Mcp3008([device]);
+new Mcp3308([device]);
 ```
 
 Device defaults to `/dev/spidev0.0`.

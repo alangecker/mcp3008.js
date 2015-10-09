@@ -1,9 +1,9 @@
 /**
-This is just a dumb test to check that the MCP3008 works. It requires the ADC to be wired up and have something connected to channel 0. Edit as necessary to suit your setup.
+This is just a dumb test to check that the MCP3308 works. It requires the ADC to be wired up and have something connected to channel 0. Edit as necessary to suit your setup.
 */
 
-var Mcp3008 = require('./mcp3008'),
-    adc = new Mcp3008(),
+var Mcp3308 = require('./mcp3308'),
+    adc = new Mcp3308(),
     out = function (value) {
         console.log("Read", value);
     };
